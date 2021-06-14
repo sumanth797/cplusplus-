@@ -6,28 +6,26 @@ class MyClass
 public:
     void outer_display()
     {
-        cout<<"In display function from outer class"<<endl; 
+        cout << "In display function from outer class" << endl;
     }
 
     class MyClassInner
     {
-       public:
-
-           void inner_display()
-           {
-               cout<<"In display function from inner class"<<endl;
-           }
-     };
+    public:
+        void inner_display()
+        {
+            cout << "In display function from inner class" << endl;
+        }
+    };
 };
 
 int main(void)
 {
 
-     MyClass obj;
-     obj.outer_display();
+    MyClass obj;
+    obj.outer_display();
 
+    MyClass ::MyClassInner inner_obj;
 
-     MyClass :: MyClassInner inner_obj;
-
-     inner_obj.inner_display();
+    inner_obj.inner_display();
 }
